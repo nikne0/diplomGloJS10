@@ -5,7 +5,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-
     // При клике на кнопку “Выбрать клуб” открываем выпадающее меню
     const toggleClub = () => {
         const clubSelect = document.querySelector('.club-select');
