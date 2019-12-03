@@ -33,11 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const clientWidth = document.documentElement.clientWidth;
         const topMenu = document.querySelector('.top-menu');
+        const fixedGift = document.querySelector('.fixed-gift');
 
         if (clientWidth < 768) {
             topMenu.style.display = 'block';
             topMenu.style.position = 'fixed';
             topMenu.style.top = '0px';
+            fixedGift.style.right = '50px';
         }
     };
     burgerMenu();
@@ -137,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const toTop = document.getElementById('totop');
         toTop.style.display = 'none';
 
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (pageYOffset > document.documentElement.clientHeight) {
                 toTop.style.display = 'block'
             } else {
@@ -147,7 +149,117 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     arrowTop();
 
+    // Слайдер
+    const slider = () => {
+        const mainSlider = document.querySelector('.main-slider'),
+            slides = mainSlider.querySelectorAll('.slide'),
+            sliderDots = document.querySelector('.slider-dots');
 
+
+        let currentSlide = 0,
+            interval,
+            li;
+
+        // Содаем Dots
+        slides.forEach((item) => {
+            li = document.createElement('li');
+            li.className = 'dot';
+            li.style.listStyleType = 'circle';
+            li.style.color = 'yellow';
+            sliderDots.appendChild(li);
+        });
+
+        // создаем переменную dots после их создания
+        const dot = document.querySelectorAll('.dot');
+        // dot[0].className = 'slick-active';
+        dot[0].classList.add('slick-active');
+        slides[0].style.display = 'block';
+
+        const prevSlide = (elem, index, strClass, active) => {
+            elem[index].classList.remove(strClass);
+            if (active) elem[index].style.display = active;
+        };
+
+        const nextSlide = (elem, index, strClass, active) => {
+            elem[index].classList.add(strClass);
+            if (active) elem[index].style.display = active;
+        };
+
+        const autoPlaySlide = () => {
+            prevSlide(slides, currentSlide, 'slide-active', 'none');
+            prevSlide(dot, currentSlide, 'slick-active');
+            currentSlide++;
+
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+
+            nextSlide(slides, currentSlide, 'slide-active', 'block');
+            nextSlide(dot, currentSlide, 'slick-active');
+        };
+
+        const startSlide = (time = 3000) => {
+            interval = setInterval(autoPlaySlide, time);
+        };
+
+        const stopSlide = () => {
+            clearInterval(interval);
+        };
+
+        mainSlider.addEventListener('click', (event) => {
+            event.preventDefault();
+            let target = event.target;
+
+            if (!target.matches('.slider-dots, .dot')) {
+                return;
+            }
+
+            prevSlide(slides, currentSlide, 'slide-active', 'none');
+            prevSlide(dot, currentSlide, 'slick-active');
+
+            if (target.matches('#arrow-right')) {
+                currentSlide++;
+            } else if (target.matches('#arrow-left')) {
+                currentSlide--;
+            } else if (target.matches('.dot')) {
+                dot.forEach((elem, index) => {
+                    if (elem === target) {
+                        currentSlide = index;
+                    }
+                });
+            }
+
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            }
+
+            nextSlide(slides, currentSlide, 'slide-active', 'block');
+            nextSlide(dot, currentSlide, 'slick-active');
+        });
+
+        mainSlider.addEventListener('mouseover', (event) => {
+            let target = event.target;
+            if (target.matches('.slider-dots') || target.matches('.dot')) {
+                stopSlide();
+            }
+        });
+
+        mainSlider.addEventListener('mouseout', (event) => {
+            let target = event.target;
+            if (target.matches('.slider-dots') || target.matches('.dot')) {
+                startSlide();
+            }
+        });
+
+        startSlide();
+
+
+
+    };
+    slider();
 
 
 });
