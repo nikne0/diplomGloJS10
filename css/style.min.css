@@ -1,4 +1,69 @@
-html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
     margin: 0;
     padding: 0;
     border: 0;
@@ -8,7 +73,15 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
     background: transparent
 }
 
-article, aside, figure, footer, header, nav, section, details, summary {
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
     display: block
 }
 
@@ -16,11 +89,15 @@ html {
     box-sizing: border-box
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit
 }
 
-img, object, embed {
+img,
+object,
+embed {
     max-width: 100%
 }
 
@@ -32,11 +109,15 @@ ul {
     list-style: none
 }
 
-blockquote, q {
+blockquote,
+q {
     quotes: none
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none
 }
@@ -53,7 +134,8 @@ del {
     text-decoration: line-through
 }
 
-abbr[title], dfn[title] {
+abbr[title],
+dfn[title] {
     border-bottom: 1px dotted #000;
     cursor: help
 }
@@ -82,7 +164,8 @@ hr {
     padding: 0
 }
 
-input, select {
+input,
+select {
     vertical-align: middle
 }
 
@@ -109,7 +192,9 @@ input[type="checkbox"] {
     vertical-align: text-bottom
 }
 
-select, input, textarea {
+select,
+input,
+textarea {
     font: 99% sans-serif
 }
 
@@ -126,11 +211,13 @@ strong {
     font-weight: 700
 }
 
-td, td img {
+td,
+td img {
     vertical-align: top
 }
 
-sub, sup {
+sub,
+sup {
     font-size: 75%;
     line-height: 0;
     position: relative
@@ -144,19 +231,31 @@ sub {
     bottom: -.25em
 }
 
-pre, code, kbd, samp {
+pre,
+code,
+kbd,
+samp {
     font-family: monospace, sans-serif
 }
 
-.clickable, label, input[type=button], input[type=submit], input[type=file], button {
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
     cursor: pointer
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
     margin: 0
 }
 
-button, input[type=button] {
+button,
+input[type=button] {
     width: auto;
     overflow: visible
 }
@@ -165,7 +264,8 @@ button, input[type=button] {
     -ms-interpolation-mode: bicubic
 }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
     content: "\0020";
     display: block;
     height: 0;
@@ -180,43 +280,58 @@ button, input[type=button] {
     zoom: 1
 }
 
-html#mozaika .head-slider, html#schelkovo .head-slider {
+html#mozaika .head-slider,
+html#schelkovo .head-slider {
     max-height: 400px;
     background: url(../images/head-slider-bg2.png) no-repeat center top
 }
 
-html#mozaika .head-slider .wrapper, html#schelkovo .head-slider .wrapper {
+html#mozaika .head-slider .wrapper,
+html#schelkovo .head-slider .wrapper {
     max-height: 400px;
     position: relative
 }
 
-html#mozaika .head-slider .slider-image, html#schelkovo .head-slider .slider-image {
+html#mozaika .head-slider .slider-image,
+html#schelkovo .head-slider .slider-image {
     max-width: 474px;
     left: auto;
     right: 0
 }
 
-html#mozaika .head-slider .slider-image img, html#schelkovo .head-slider .slider-image img {
+html#mozaika .head-slider .slider-image img,
+html#schelkovo .head-slider .slider-image img {
     min-width: 474px
 }
 
-html#mozaika .main-slider .slide .slide-text .validity, html#schelkovo .main-slider .slide .slide-text .validity {
+html#mozaika .main-slider .slide .slide-text .validity,
+html#schelkovo .main-slider .slide .slide-text .validity {
     display: none
 }
 
-html#mozaika .main-slider .slide .slide-text .offer-head .top, html#schelkovo .main-slider .slide .slide-text .offer-head .top, html#mozaika .main-slider .slide.type2 .slide-text .offer-head .top, html#schelkovo .main-slider .slide.type2 .slide-text .offer-head .top {
+html#mozaika .main-slider .slide .slide-text .offer-head .top,
+html#schelkovo .main-slider .slide .slide-text .offer-head .top,
+html#mozaika .main-slider .slide.type2 .slide-text .offer-head .top,
+html#schelkovo .main-slider .slide.type2 .slide-text .offer-head .top {
     line-height: 46px
 }
 
-html#mozaika .main-slider .slide .slide-text .offer-head .middle, html#schelkovo .main-slider .slide .slide-text .offer-head .middle, html#mozaika .main-slider .slide.type2 .slide-text .offer-head .middle, html#schelkovo .main-slider .slide.type2 .slide-text .offer-head .middle {
+html#mozaika .main-slider .slide .slide-text .offer-head .middle,
+html#schelkovo .main-slider .slide .slide-text .offer-head .middle,
+html#mozaika .main-slider .slide.type2 .slide-text .offer-head .middle,
+html#schelkovo .main-slider .slide.type2 .slide-text .offer-head .middle {
     line-height: 76px
 }
 
-html#mozaika .main-slider .slide .slide-text .offer-head .bottom, html#schelkovo .main-slider .slide .slide-text .offer-head .bottom, html#mozaika .main-slider .slide.type2 .slide-text .offer-head .bottom, html#schelkovo .main-slider .slide.type2 .slide-text .offer-head .bottom {
+html#mozaika .main-slider .slide .slide-text .offer-head .bottom,
+html#schelkovo .main-slider .slide .slide-text .offer-head .bottom,
+html#mozaika .main-slider .slide.type2 .slide-text .offer-head .bottom,
+html#schelkovo .main-slider .slide.type2 .slide-text .offer-head .bottom {
     line-height: 40px
 }
 
-html#mozaika .about-club .wrapper, html#schelkovo .about-club .wrapper {
+html#mozaika .about-club .wrapper,
+html#schelkovo .about-club .wrapper {
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
@@ -225,22 +340,26 @@ html#mozaika .about-club .wrapper, html#schelkovo .about-club .wrapper {
     display: flex
 }
 
-html#mozaika .about-club .left, html#schelkovo .about-club .left {
+html#mozaika .about-club .left,
+html#schelkovo .about-club .left {
     width: 48%;
     margin-right: 20px
 }
 
-html#mozaika .about-club .left .image, html#schelkovo .about-club .left .image {
+html#mozaika .about-club .left .image,
+html#schelkovo .about-club .left .image {
     position: relative;
     width: 100%
 }
 
-html#mozaika .about-club .left .image img, html#schelkovo .about-club .left .image img {
+html#mozaika .about-club .left .image img,
+html#schelkovo .about-club .left .image img {
     max-width: 100%;
     height: auto
 }
 
-html#mozaika .about-club .left .club-head, html#schelkovo .about-club .left .club-head {
+html#mozaika .about-club .left .club-head,
+html#schelkovo .about-club .left .club-head {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -252,11 +371,13 @@ html#mozaika .about-club .left .club-head, html#schelkovo .about-club .left .clu
     padding-top: 36px
 }
 
-html#mozaika .about-club .left a, html#schelkovo .about-club .left a {
+html#mozaika .about-club .left a,
+html#schelkovo .about-club .left a {
     text-decoration: none
 }
 
-html#mozaika .about-club .left h3, html#schelkovo .about-club .left h3 {
+html#mozaika .about-club .left h3,
+html#schelkovo .about-club .left h3 {
     display: block;
     width: 100%;
     color: #fff;
@@ -267,12 +388,14 @@ html#mozaika .about-club .left h3, html#schelkovo .about-club .left h3 {
     text-align: center
 }
 
-html#mozaika .about-club .right, html#schelkovo .about-club .right {
+html#mozaika .about-club .right,
+html#schelkovo .about-club .right {
     padding-left: 30px;
     padding-top: 10px
 }
 
-html#mozaika .about-club .right .list, html#schelkovo .about-club .right .list {
+html#mozaika .about-club .right .list,
+html#schelkovo .about-club .right .list {
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
@@ -282,28 +405,33 @@ html#mozaika .about-club .right .list, html#schelkovo .about-club .right .list {
     margin-bottom: 18px
 }
 
-html#mozaika .about-club .right .list img, html#schelkovo .about-club .right .list img {
+html#mozaika .about-club .right .list img,
+html#schelkovo .about-club .right .list img {
     margin-right: 20px
 }
 
-html#mozaika .about-club .right .list .text, html#schelkovo .about-club .right .list .text {
+html#mozaika .about-club .right .list .text,
+html#schelkovo .about-club .right .list .text {
     color: #2e2e2e;
     font-size: 17px;
     font-weight: 300;
     line-height: 23px
 }
 
-html#mozaika .about-club .right .list h6, html#schelkovo .about-club .right .list h6 {
+html#mozaika .about-club .right .list h6,
+html#schelkovo .about-club .right .list h6 {
     font-size: 18px;
     font-weight: 500;
     text-align: left
 }
 
-html#mozaika .about-club .right .btn, html#schelkovo .about-club .right .btn {
+html#mozaika .about-club .right .btn,
+html#schelkovo .about-club .right .btn {
     width: 180px
 }
 
-html#mozaika .breadcrumbs, html#schelkovo .breadcrumbs {
+html#mozaika .breadcrumbs,
+html#schelkovo .breadcrumbs {
     color: #949494;
     font-weight: 300;
     font-size: 13px;
@@ -311,7 +439,8 @@ html#mozaika .breadcrumbs, html#schelkovo .breadcrumbs {
     border-bottom: 1px solid #e1dfe2
 }
 
-html#mozaika .breadcrumbs a, html#schelkovo .breadcrumbs a {
+html#mozaika .breadcrumbs a,
+html#schelkovo .breadcrumbs a {
     color: #2e2e2e;
     font-weight: 500;
     text-decoration: none;
@@ -319,7 +448,8 @@ html#mozaika .breadcrumbs a, html#schelkovo .breadcrumbs a {
     position: relative
 }
 
-html#mozaika .breadcrumbs a:after, html#schelkovo .breadcrumbs a:after {
+html#mozaika .breadcrumbs a:after,
+html#schelkovo .breadcrumbs a:after {
     content: url(../images/arrow-v.png);
     width: 7px;
     height: 7px;
@@ -329,11 +459,13 @@ html#mozaika .breadcrumbs a:after, html#schelkovo .breadcrumbs a:after {
     padding-left: 7px
 }
 
-html#mozaika .advantages, html#schelkovo .advantages {
+html#mozaika .advantages,
+html#schelkovo .advantages {
     margin-top: 49px
 }
 
-html#mozaika .advantages .wrapper, html#schelkovo .advantages .wrapper {
+html#mozaika .advantages .wrapper,
+html#schelkovo .advantages .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -342,7 +474,8 @@ html#mozaika .advantages .wrapper, html#schelkovo .advantages .wrapper {
     justify-content: space-between
 }
 
-html#mozaika .advantage, html#schelkovo .advantage {
+html#mozaika .advantage,
+html#schelkovo .advantage {
     width: 145px;
     height: 156px;
     margin-bottom: 20px;
@@ -353,25 +486,30 @@ html#mozaika .advantage, html#schelkovo .advantage {
     margin-left: 9px
 }
 
-html#mozaika .advantage:first-child, html#schelkovo .advantage:first-child {
+html#mozaika .advantage:first-child,
+html#schelkovo .advantage:first-child {
     margin-left: 0
 }
 
-html#mozaika .advantage:last-child, html#schelkovo .advantage:last-child {
+html#mozaika .advantage:last-child,
+html#schelkovo .advantage:last-child {
     margin-right: 0
 }
 
-html#mozaika .advantage .image, html#schelkovo .advantage .image {
+html#mozaika .advantage .image,
+html#schelkovo .advantage .image {
     border-bottom: 1px solid #e1dfe2;
     padding-top: 20px;
     padding-bottom: 20px
 }
 
-html#mozaika .advantage .image img, html#schelkovo .advantage .image img {
+html#mozaika .advantage .image img,
+html#schelkovo .advantage .image img {
     margin: 0 auto
 }
 
-html#mozaika .advantage .text, html#schelkovo .advantage .text {
+html#mozaika .advantage .text,
+html#schelkovo .advantage .text {
     color: #2e2e2e;
     font-size: 14px;
     font-weight: 700;
@@ -379,21 +517,25 @@ html#mozaika .advantage .text, html#schelkovo .advantage .text {
     padding-top: 17px
 }
 
-html#mozaika #adv-slider, html#schelkovo #adv-slider {
+html#mozaika #adv-slider,
+html#schelkovo #adv-slider {
     margin-top: 30px;
     padding-left: 35px;
     padding-right: 35px
 }
 
-html#mozaika #adv-slider .advantage:first-child, html#schelkovo #adv-slider .advantage:first-child {
+html#mozaika #adv-slider .advantage:first-child,
+html#schelkovo #adv-slider .advantage:first-child {
     margin-left: 9px
 }
 
-html#mozaika #adv-slider .advantage:last-child, html#schelkovo #adv-slider .advantage:last-child {
+html#mozaika #adv-slider .advantage:last-child,
+html#schelkovo #adv-slider .advantage:last-child {
     margin-right: 9px
 }
 
-html#mozaika #adv-slider .slider-arrow, html#schelkovo #adv-slider .slider-arrow {
+html#mozaika #adv-slider .slider-arrow,
+html#schelkovo #adv-slider .slider-arrow {
     position: absolute;
     top: 75px;
     margin-top: -18px;
@@ -401,7 +543,8 @@ html#mozaika #adv-slider .slider-arrow, html#schelkovo #adv-slider .slider-arrow
     cursor: pointer
 }
 
-html#mozaika #adv-slider .slider-arrow span, html#schelkovo #adv-slider .slider-arrow span {
+html#mozaika #adv-slider .slider-arrow span,
+html#schelkovo #adv-slider .slider-arrow span {
     display: block;
     width: 36px;
     height: 37px;
@@ -411,21 +554,25 @@ html#mozaika #adv-slider .slider-arrow span, html#schelkovo #adv-slider .slider-
     padding-top: 11px
 }
 
-html#mozaika #adv-slider .slider-arrow.prev, html#schelkovo #adv-slider .slider-arrow.prev {
+html#mozaika #adv-slider .slider-arrow.prev,
+html#schelkovo #adv-slider .slider-arrow.prev {
     left: 2px
 }
 
-html#mozaika #adv-slider .slider-arrow.next, html#schelkovo #adv-slider .slider-arrow.next {
+html#mozaika #adv-slider .slider-arrow.next,
+html#schelkovo #adv-slider .slider-arrow.next {
     right: 2px
 }
 
-html#mozaika #cards .right, html#schelkovo #cards .right {
+html#mozaika #cards .right,
+html#schelkovo #cards .right {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1
 }
 
-html#mozaika #cards #card_order .cards-types, html#schelkovo #cards #card_order .cards-types {
+html#mozaika #cards #card_order .cards-types,
+html#schelkovo #cards #card_order .cards-types {
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
@@ -438,7 +585,8 @@ html#mozaika #cards #card_order .cards-types, html#schelkovo #cards #card_order 
     margin-bottom: 20px
 }
 
-html#mozaika #cards #card_order input[type=radio] + label, html#schelkovo #cards #card_order input[type=radio] + label {
+html#mozaika #cards #card_order input[type=radio]+label,
+html#schelkovo #cards #card_order input[type=radio]+label {
     display: inline-block;
     width: 145px;
     height: 92px;
@@ -456,32 +604,38 @@ html#mozaika #cards #card_order input[type=radio] + label, html#schelkovo #cards
     cursor: pointer
 }
 
-html#mozaika #cards #card_order input[type=radio]:checked + label, html#schelkovo #cards #card_order input[type=radio]:checked + label {
+html#mozaika #cards #card_order input[type=radio]:checked+label,
+html#schelkovo #cards #card_order input[type=radio]:checked+label {
     background-image: none;
     outline: 0;
     background-color: #ffd11a;
     border-color: #ffd11a
 }
 
-html#mozaika #cards #card_order span, html#schelkovo #cards #card_order span {
+html#mozaika #cards #card_order span,
+html#schelkovo #cards #card_order span {
     opacity: .6;
     line-height: 16px
 }
 
-html#mozaika #cards #card_order span.cost, html#schelkovo #cards #card_order span.cost {
+html#mozaika #cards #card_order span.cost,
+html#schelkovo #cards #card_order span.cost {
     font-size: 16px
 }
 
-html#mozaika #cards #card_order span.rubl, html#schelkovo #cards #card_order span.rubl {
+html#mozaika #cards #card_order span.rubl,
+html#schelkovo #cards #card_order span.rubl {
     font-family: "ALS Rubl";
     text-transform: none
 }
 
-html#mozaika #cards #card_order span.frost, html#schelkovo #cards #card_order span.frost {
+html#mozaika #cards #card_order span.frost,
+html#schelkovo #cards #card_order span.frost {
     text-transform: none
 }
 
-html#mozaika #cards #card_order .form-bottom, html#schelkovo #cards #card_order .form-bottom {
+html#mozaika #cards #card_order .form-bottom,
+html#schelkovo #cards #card_order .form-bottom {
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
@@ -496,15 +650,18 @@ html#mozaika #cards #card_order .form-bottom, html#schelkovo #cards #card_order 
     align-items: center
 }
 
-html#mozaika #cards #card_order .form-bottom p.submit, html#schelkovo #cards #card_order .form-bottom p.submit {
+html#mozaika #cards #card_order .form-bottom p.submit,
+html#schelkovo #cards #card_order .form-bottom p.submit {
     padding-left: 10px
 }
 
-html#mozaika #services, html#schelkovo #services {
+html#mozaika #services,
+html#schelkovo #services {
     padding-bottom: 50px
 }
 
-html#mozaika #map, html#schelkovo #map {
+html#mozaika #map,
+html#schelkovo #map {
     padding-top: 0;
     width: 100%;
     height: 500px;
@@ -521,14 +678,15 @@ html#schelkovo .advantages .wrapper {
     justify-content: center
 }
 
-@media only screen and (max-width: 1199px) {
-    html#mozaika .advantages .wrapper, html#schelkovo .advantages .wrapper {
+@media only screen and (max-width:1199px) {
+    html#mozaika .advantages .wrapper,
+    html#schelkovo .advantages .wrapper {
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
         flex-wrap: wrap
     }
-
-    html#mozaika .advantages .wrapper .advantage, html#schelkovo .advantages .wrapper .advantage {
+    html#mozaika .advantages .wrapper .advantage,
+    html#schelkovo .advantages .wrapper .advantage {
         width: 23%;
         margin-bottom: 20px;
         margin-left: 8px;
@@ -536,22 +694,25 @@ html#schelkovo .advantages .wrapper {
     }
 }
 
-@media only screen and (max-width: 991px) {
-    html#mozaika .head-slider, html#schelkovo .head-slider {
+@media only screen and (max-width:991px) {
+    html#mozaika .head-slider,
+    html#schelkovo .head-slider {
         height: 340px
     }
 }
 
-@media only screen and (max-width: 850px) {
-    html#mozaika .advantages .wrapper, html#schelkovo .advantages .wrapper {
+@media only screen and (max-width:850px) {
+    html#mozaika .advantages .wrapper,
+    html#schelkovo .advantages .wrapper {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center
     }
 }
 
-@media only screen and (max-width: 767px) {
-    html#mozaika .about-club .wrapper, html#schelkovo .about-club .wrapper {
+@media only screen and (max-width:767px) {
+    html#mozaika .about-club .wrapper,
+    html#schelkovo .about-club .wrapper {
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -559,71 +720,74 @@ html#schelkovo .advantages .wrapper {
         -ms-flex-pack: center;
         justify-content: center
     }
-
-    html#mozaika .about-club .left, html#schelkovo .about-club .left {
+    html#mozaika .about-club .left,
+    html#schelkovo .about-club .left {
         width: 95%;
         margin: 0 auto
     }
-
-    html#mozaika .about-club .left .image, html#schelkovo .about-club .left .image {
+    html#mozaika .about-club .left .image,
+    html#schelkovo .about-club .left .image {
         text-align: center
     }
-
-    html#mozaika .about-club .left .image img, html#schelkovo .about-club .left .image img {
+    html#mozaika .about-club .left .image img,
+    html#schelkovo .about-club .left .image img {
         margin: 0 auto
     }
-
-    html#mozaika .about-club .right, html#schelkovo .about-club .right {
+    html#mozaika .about-club .right,
+    html#schelkovo .about-club .right {
         text-align: center;
         padding-left: 0
     }
-
-    html#mozaika .advantages .wrapper, html#schelkovo .advantages .wrapper {
+    html#mozaika .advantages .wrapper,
+    html#schelkovo .advantages .wrapper {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center
     }
-
-    html#mozaika #cards .content .left, html#schelkovo #cards .content .left {
+    html#mozaika #cards .content .left,
+    html#schelkovo #cards .content .left {
         margin-right: 0
     }
-
-    html#mozaika #cards #card_order .cards-types, html#schelkovo #cards #card_order .cards-types {
+    html#mozaika #cards #card_order .cards-types,
+    html#schelkovo #cards #card_order .cards-types {
         text-align: center;
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
         flex-wrap: wrap
     }
-
-    html#mozaika #cards #card_order input[type="radio"] + label, html#schelkovo #cards #card_order input[type="radio"] + label {
+    html#mozaika #cards #card_order input[type="radio"]+label,
+    html#schelkovo #cards #card_order input[type="radio"]+label {
         width: 30vw
     }
 }
 
-@media only screen and (max-width: 479px) {
-    html#mozaika .main-slider .slide .slide-text .offer-head .middle, html#schelkovo .main-slider .slide .slide-text .offer-head .middle, html#mozaika .main-slider .slide.type2 .slide-text .offer-head .middle, html#schelkovo .main-slider .slide.type2 .slide-text .offer-head .middle {
+@media only screen and (max-width:479px) {
+    html#mozaika .main-slider .slide .slide-text .offer-head .middle,
+    html#schelkovo .main-slider .slide .slide-text .offer-head .middle,
+    html#mozaika .main-slider .slide.type2 .slide-text .offer-head .middle,
+    html#schelkovo .main-slider .slide.type2 .slide-text .offer-head .middle {
         font-size: 32px;
         line-height: 36px
     }
-
-    html#mozaika .about-club .right .list img, html#schelkovo .about-club .right .list img {
+    html#mozaika .about-club .right .list img,
+    html#schelkovo .about-club .right .list img {
         display: none
     }
-
-    html#mozaika .about-club .right .list .text, html#schelkovo .about-club .right .list .text {
+    html#mozaika .about-club .right .list .text,
+    html#schelkovo .about-club .right .list .text {
         text-align: center;
         margin: 0 auto
     }
-
-    html#mozaika .about-club .right .list .text h6, html#schelkovo .about-club .right .list .text h6 {
+    html#mozaika .about-club .right .list .text h6,
+    html#schelkovo .about-club .right .list .text h6 {
         text-align: center
     }
-
-    html#mozaika #cards #card_order input[type="radio"] + label, html#schelkovo #cards #card_order input[type="radio"] + label {
+    html#mozaika #cards #card_order input[type="radio"]+label,
+    html#schelkovo #cards #card_order input[type="radio"]+label {
         width: 42vw
     }
-
-    html#mozaika #cards #card_order .form-bottom, html#schelkovo #cards #card_order .form-bottom {
+    html#mozaika #cards #card_order .form-bottom,
+    html#schelkovo #cards #card_order .form-bottom {
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -631,8 +795,8 @@ html#schelkovo .advantages .wrapper {
         -ms-flex-pack: center;
         justify-content: center
     }
-
-    html#mozaika #cards #card_order .cards-types, html#schelkovo #cards #card_order .cards-types {
+    html#mozaika #cards #card_order .cards-types,
+    html#schelkovo #cards #card_order .cards-types {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center
@@ -678,7 +842,8 @@ html#schelkovo .advantages .wrapper {
     animation-name: pulse
 }
 
-html, body {
+html,
+body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     max-width: 1920px
@@ -741,7 +906,8 @@ section {
     padding-top: 56px
 }
 
-a, button {
+a,
+button {
     outline: none
 }
 
@@ -834,6 +1000,10 @@ header .head .club-select .clubs-list ul {
     border: 1px solid #ffd11a;
     border-radius: 10px;
     text-align: center
+}
+
+header .head .club-select .clubs-list ul.active {
+    display: block;
 }
 
 header .head .club-select .clubs-list ul li a {
@@ -931,6 +1101,7 @@ header nav.top-menu {
 }
 
 header nav.top-menu .menu-button {
+    display: none;
     text-align: right
 }
 
@@ -1021,6 +1192,10 @@ nav.popup-menu {
     top: 0
 }
 
+nav.popup-menu.active {
+    display: flex;
+}
+
 nav.popup-menu ul {
     margin: auto
 }
@@ -1068,12 +1243,13 @@ nav.popup-menu .close-menu-btn img {
 .head-slider {
     height: 541px;
     position: relative;
-    background: url(../images/head-slider-bg.png) no-repeat center top
+    background: url(../images/head-slider-bg.png) no-repeat center top;
+    padding-top: 80px;
 }
 
 .head-slider .wrapper {
     height: 100%;
-    max-height: 541px
+    max-height: 541px;
 }
 
 .head-slider .slider-image {
@@ -1121,7 +1297,7 @@ nav.popup-menu .close-menu-btn img {
     display: none;
 }
 
-.main-slider .slide.slide-active {
+.main-slider .slide.active {
     display: block;
 }
 
@@ -1131,7 +1307,7 @@ nav.popup-menu .close-menu-btn img {
 }
 
 .main-slider .slide .slide-text .offer-head {
-    margin-top: 80px;
+    /* margin-top: 80px; */
     background: url(../images/slider-offer-bg.png) no-repeat 10px 0;
     padding-top: 20px
 }
@@ -1199,7 +1375,7 @@ nav.popup-menu .close-menu-btn img {
 
 .slider-dots {
     position: absolute;
-    bottom: 70px;
+    bottom: 50px;
     left: 50%;
     margin-left: -65px;
     z-index: 1000
@@ -1209,7 +1385,7 @@ nav.popup-menu .close-menu-btn img {
     float: left;
     list-style-type: none;
     font-size: xx-large;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .slider-dots li button {
@@ -1217,13 +1393,13 @@ nav.popup-menu .close-menu-btn img {
     height: 4px;
     background-color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     color: transparent;
     margin-right: 5px
 }
 
-.slider-dots li.slick-active button {
-    background-color: #ffd11a;
+.slider-dots li.dot.active button {
+    background-color: #ffd11a
 }
 
 #clubs {
@@ -1242,7 +1418,8 @@ nav.popup-menu .close-menu-btn img {
     justify-content: space-between
 }
 
-#clubs .content .left, #clubs .content .right {
+#clubs .content .left,
+#clubs .content .right {
     min-width: 280px;
     text-align: center;
     border: 1px solid rgba(39, 25, 48, .14);
@@ -1354,18 +1531,53 @@ nav.popup-menu .close-menu-btn img {
     margin-right: 5px
 }
 
+#services .glo-slider__prev {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#services .glo-slider__next {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#services .wrapper {
+    padding: 0;
+}
+
 .services-slider {
+    position: relative;
     display: flex;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px
+    /* padding-left: 15px;*/
+    /*padding-right: 15px */
 }
 
 .services-slider .slide {
+    display: block;
     text-align: center;
     margin-right: 6px;
     margin-left: 6px;
-    width: 210px
+    width: 210px;
+}
+
+#slide-prev, #slide-next {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-45%);
+    background-color: #ffd11a;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+}
+
+#slide-prev {
+    left: 0;
+}
+
+#slide-next {
+    right: 0;
 }
 
 .services-slider .slide img {
@@ -1406,7 +1618,6 @@ nav.popup-menu .close-menu-btn img {
     border-radius: 50%;
     text-align: center;
     padding-top: 11px
-
 }
 
 .services-slider .slider-arrow.prev {
@@ -1426,6 +1637,7 @@ nav.popup-menu .close-menu-btn img {
 }
 
 #gallery .gallery-slider {
+    position: relative;
     padding-left: 75px;
     padding-right: 75px;
     max-width: 900px;
@@ -1434,26 +1646,27 @@ nav.popup-menu .close-menu-btn img {
 }
 
 #gallery .gallery-slider .slide {
-    margin: 0 auto !important;
+    display: none;
+    margin: 0 auto!important;
     width: 100%
+}
+
+#gallery .gallery-slider .slide.active {
+    display: block;
 }
 
 #gallery .gallery-slider .slider-arrow {
     position: absolute;
     top: 50%;
     margin-top: -18px;
-    z-index: 100;
-    cursor: pointer
-}
-
-#gallery .gallery-slider .slider-arrow span {
-    display: block;
-    width: 36px;
-    height: 37px;
+    width: 35px;
+    height: 35px;
     background-color: #f4c71b;
     border-radius: 50%;
+    border: none;
     text-align: center;
-    padding-top: 11px
+    z-index: 100;
+    cursor: pointer
 }
 
 #gallery .gallery-slider .slider-arrow.prev {
@@ -1468,6 +1681,10 @@ nav.popup-menu .close-menu-btn img {
     left: 50%;
     margin-left: -65px;
     bottom: 5%
+}
+
+#gallery .gallery-slider .slider-dots li.dot.active button {
+    background-color: #ffd11a;
 }
 
 #cards {
@@ -1516,7 +1733,7 @@ nav.popup-menu .close-menu-btn img {
     justify-content: center
 }
 
-#card_order .time input[type=radio] + label {
+#card_order .time input[type=radio]+label {
     display: inline-block;
     width: 120px;
     height: 45px;
@@ -1534,7 +1751,7 @@ nav.popup-menu .close-menu-btn img {
     cursor: pointer
 }
 
-#card_order .time input[type=radio]:checked + label {
+#card_order .time input[type=radio]:checked+label {
     background-image: none;
     outline: 0;
     background-color: #ffd11a;
@@ -1558,7 +1775,7 @@ nav.popup-menu .close-menu-btn img {
     text-transform: uppercase
 }
 
-#card_order p.personal-data input[type=checkbox]:not(checked) + label:before {
+#card_order p.personal-data input[type=checkbox]:not(checked)+label:before {
     content: '';
     width: 21px;
     height: 21px;
@@ -1570,7 +1787,7 @@ nav.popup-menu .close-menu-btn img {
     left: -29px
 }
 
-#card_order p.personal-data input[type=checkbox]:checked + label:before {
+#card_order p.personal-data input[type=checkbox]:checked+label:before {
     content: url(../images/checked.png);
     width: 21px;
     height: 21px;
@@ -1644,7 +1861,7 @@ nav.popup-menu .close-menu-btn img {
     display: none
 }
 
-.club input[type=radio]:not(checked) + label:before {
+.club input[type=radio]:not(checked)+label:before {
     content: '';
     width: 21px;
     height: 21px;
@@ -1656,7 +1873,7 @@ nav.popup-menu .close-menu-btn img {
     left: -29px
 }
 
-.club input[type=radio]:checked + label:before {
+.club input[type=radio]:checked+label:before {
     content: url(../images/checked.png);
     width: 21px;
     height: 21px;
@@ -1715,7 +1932,7 @@ footer .footer-top .left {
     width: 45%
 }
 
-footer .footer-top .left > div {
+footer .footer-top .left>div {
     margin-right: 20px;
     margin-bottom: 20px
 }
@@ -1980,7 +2197,8 @@ footer .footer-bottom .right .socials .social-icon:hover a {
     color: #1e1c34
 }
 
-.popup .form-content input[type='text'], .popup .form-content input[type='tel'] {
+.popup .form-content input[type='text'],
+.popup .form-content input[type='tel'] {
     width: 268px;
     padding: 5px;
     height: 45px;
@@ -2015,7 +2233,7 @@ p.personal-data input[type='checkbox'] {
     display: none
 }
 
-p.personal-data input[type=checkbox]:not(checked) + label:before {
+p.personal-data input[type=checkbox]:not(checked)+label:before {
     content: '';
     height: 21px;
     width: 21px;
@@ -2027,7 +2245,7 @@ p.personal-data input[type=checkbox]:not(checked) + label:before {
     left: -29px
 }
 
-p.personal-data input[type=checkbox]:checked + label:before {
+p.personal-data input[type=checkbox]:checked+label:before {
     content: url(../images/checked.png);
     width: 21px;
     height: 21px;
@@ -2074,21 +2292,19 @@ p.personal-data input[type=checkbox]:checked + label:before {
     margin-top: 30px
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width:1199px) {
     .services-slider .slider-arrow.prev {
         left: 25px
     }
-
     .services-slider .slider-arrow.next {
         right: 20px
     }
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width:1199px) {
     header .top-menu ul li a {
         padding-left: 30px
     }
-
     .head-slider .slider-image {
         left: 50vw;
         right: 0;
@@ -2096,102 +2312,90 @@ p.personal-data input[type=checkbox]:checked + label:before {
     }
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width:991px) {
     .hidden-991 {
-        display: none !important
+        display: none!important
     }
-
     header .head .head-main {
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
         flex-wrap: wrap
     }
-
-    header .head .head-main .left, header .head .head-main .right {
+    header .head .head-main .left,
+    header .head .head-main .right {
         width: 100%;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center
     }
-
     header .head .head-main .left {
         margin-bottom: 15px
     }
-
     header .head .head-main .left .logo {
         margin-right: 30px
     }
-
     header .head .head-main .free-visit {
         margin-right: 20px
     }
-
     header .top-menu ul li a {
         font-size: 12px;
         padding-left: 25px
     }
-
     .head-slider {
-        height: 400px
+        height: 400px;
+        padding-top: 10px;
     }
-
     .head-slider .slider-image {
         display: none
     }
-
     .main-slider .slide .slide-text {
         margin: 0 auto
     }
-
-    .main-slider .slide .slide-text .offer-head, .main-slider .slide.type2 .slide-text .offer-head {
+    .main-slider .slide .slide-text .offer-head,
+    .main-slider .slide.type2 .slide-text .offer-head {
         background: transparent;
         margin-top: 30px;
         text-align: center
     }
-
-    .main-slider .slide .slide-text .offer-head .top, .main-slider .slide.type2 .slide-text .offer-head .top {
+    .main-slider .slide .slide-text .offer-head .top,
+    .main-slider .slide.type2 .slide-text .offer-head .top {
         font-size: 36px;
         line-height: 40px
     }
-
-    .main-slider .slide .slide-text .offer-head .middle, .main-slider .slide.type2 .slide-text .offer-head .middle {
+    .main-slider .slide .slide-text .offer-head .middle,
+    .main-slider .slide.type2 .slide-text .offer-head .middle {
         font-size: 45px;
         line-height: 50px
     }
-
-    .main-slider .slide .slide-text .offer-head .bottom, .main-slider .slide.type2 .slide-text .offer-head .bottom {
+    .main-slider .slide .slide-text .offer-head .bottom,
+    .main-slider .slide.type2 .slide-text .offer-head .bottom {
         font-size: 38px;
         line-height: 42px
     }
-
-    .main-slider .slide .slide-text .validity, .main-slider .slide.type2 .slide-text .validity {
+    .main-slider .slide .slide-text .validity,
+    .main-slider .slide.type2 .slide-text .validity {
         text-align: center
     }
-
     .slider-dots {
         bottom: 56px
     }
-
     #clubs .content .bottom {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center
     }
-
     .services-slider .slider-arrow.prev {
         left: 3px
     }
-
     .services-slider .slider-arrow.next {
         right: 3px
     }
 }
 
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width:880px) {
     header .top-menu ul li a {
         padding-left: 15px
     }
-
     footer .footer-top {
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
@@ -2199,82 +2403,74 @@ p.personal-data input[type=checkbox]:checked + label:before {
     }
 }
 
-@media only screen and (max-width: 767px) {
-    html, body {
+@media only screen and (max-width:767px) {
+    html,
+    body {
         font-size: 12px
     }
-
     .hidden-small {
-        display: none !important
+        display: none!important
     }
-
     .hidden-large {
         display: block
     }
-
     header {
         margin-bottom: 0
     }
-
+    header nav.top-menu .menu-button {
+        display: block;
+    }
     header .head-main .right .free-visit {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center
     }
-
     header .head-main .right .free-visit img {
         margin-right: 15px
     }
-
     #clubs .content {
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
         flex-wrap: wrap
     }
-
-    #clubs .content .left, #clubs .content .right {
+    #clubs .content .left,
+    #clubs .content .right {
         width: 100%;
         max-width: 556px;
         margin: 10px auto
     }
-
-    #banner, header {
+    #banner,
+    header {
         height: auto;
         max-height: none;
         background-size: cover
     }
-
     #banner-form input {
         display: block;
         width: 80%;
         margin: 0 auto 15px
     }
-
     #banner-form input[type='checkbox'] {
         display: none
     }
-
     #banner-form p.personal-data {
         position: relative;
         top: -60px;
         padding-left: 15px;
         padding-right: 5px
     }
-
     #banner-form button {
         position: relative;
         top: 40px
     }
-
     #gallery .gallery-slider {
         padding-left: 10px;
         padding-right: 10px
     }
-
-    #gallery .gallery-slider .slider-arrow.next, #gallery .gallery-slider .slider-arrow.prev {
-        display: none !important
+    #gallery .gallery-slider .slider-arrow.next,
+    #gallery .gallery-slider .slider-arrow.prev {
+        display: none!important
     }
-
     #gallery .gallery-slider .slider-dots {
         background-color: rgba(79, 25, 52, .5);
         padding-top: 12px;
@@ -2287,32 +2483,28 @@ p.personal-data input[type=checkbox]:checked + label:before {
         -o-flex-wrap: wrap;
         flex-wrap: wrap
     }
-
-    #cards .content .left, #cards .content .right {
+    #cards .content .left,
+    #cards .content .right {
         width: 100%
     }
-
     #cards .content .left {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
         margin-bottom: 20px
     }
-
     #card_order p.submit {
         text-align: center
     }
-
     footer .footer-top {
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
         flex-wrap: wrap
     }
-
-    footer .footer-top .left, footer .footer-top .right {
+    footer .footer-top .left,
+    footer .footer-top .right {
         width: 100%
     }
-
     #footer_form .content {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2320,13 +2512,12 @@ p.personal-data input[type=checkbox]:checked + label:before {
     }
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width:580px) {
     header .head-main .right {
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
         flex-wrap: wrap
     }
-
     header .head-main .right .free-visit {
         width: 100%;
         -webkit-box-pack: center;
@@ -2334,77 +2525,67 @@ p.personal-data input[type=checkbox]:checked + label:before {
         justify-content: center;
         margin-bottom: 15px
     }
-
     header .head-main .right .free-visit img {
         margin-right: 15px
     }
 }
 
-@media only screen and (max-width: 479px) {
-    .main-slider .slide .slide-text .offer-head, .main-slider .slide.type2 .slide-text .offer-head {
+@media only screen and (max-width:479px) {
+    .main-slider .slide .slide-text .offer-head,
+    .main-slider .slide.type2 .slide-text .offer-head {
         background: transparent;
         margin-top: 30px;
         text-align: center
     }
-
-    .main-slider .slide .slide-text .offer-head .top, .main-slider .slide.type2 .slide-text .offer-head .top {
+    .main-slider .slide .slide-text .offer-head .top,
+    .main-slider .slide.type2 .slide-text .offer-head .top {
         font-size: 27px;
         line-height: 30px
     }
-
-    .main-slider .slide .slide-text .offer-head .middle, .main-slider .slide.type2 .slide-text .offer-head .middle {
+    .main-slider .slide .slide-text .offer-head .middle,
+    .main-slider .slide.type2 .slide-text .offer-head .middle {
         font-size: 34px;
         line-height: 38px
     }
-
-    .main-slider .slide .slide-text .offer-head .bottom, .main-slider .slide.type2 .slide-text .offer-head .bottom {
+    .main-slider .slide .slide-text .offer-head .bottom,
+    .main-slider .slide.type2 .slide-text .offer-head .bottom {
         font-size: 27px;
         line-height: 30px
     }
-
     .main-slider .slide .slide-text {
         width: 100%
     }
-
     #card_order .time {
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
         flex-wrap: wrap
     }
-
-    #card_order .time input[type="radio"] + label {
+    #card_order .time input[type="radio"]+label {
         width: 40%
     }
-
     footer .footer-top .left {
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
         flex-wrap: wrap
     }
-
     footer .footer-top .footer-logo {
         width: 100%;
         margin-right: 0;
         text-align: center
     }
-
-    footer .footer-top > div {
+    footer .footer-top>div {
         text-align: center
     }
-
     footer .footer-top .call {
         width: 100%;
         text-align: center
     }
-
     footer .footer-top .choose-club {
         text-align: left
     }
-
     footer h5 {
         text-align: center
     }
-
     footer .footer-bottom {
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
@@ -2413,58 +2594,49 @@ p.personal-data input[type=checkbox]:checked + label:before {
         -ms-flex-pack: center;
         justify-content: center
     }
-
     footer .footer-bottom .left {
         text-align: center
     }
-
     footer .footer-bottom .right .socials {
         margin-left: 0
     }
-
     #footer_form .content {
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
         flex-wrap: wrap
     }
-
     .popup .form-wrapper {
         width: 95vw
     }
-
     .popup .form-content {
         width: 90vw
     }
-
     .popup .form-content h4 {
         width: 90vw
     }
-
-    .popup .form-content input[type="text"], .popup .form-content input[type="tel"] {
+    .popup .form-content input[type="text"],
+    .popup .form-content input[type="tel"] {
         width: 80vw
     }
 }
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width:390px) {
     header .head .head-main .left {
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
         flex-wrap: wrap;
         min-width: 200px
     }
-
     header .head .head-main .left .logo {
         margin-right: 0;
         width: 100%;
         text-align: center;
         margin-bottom: 12px
     }
-
     header .head .call p {
         font-size: 12px
     }
-
     .slider-dots {
-        bottom: 50px
+        bottom: 30px
     }
 }

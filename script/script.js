@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             topMenu.style.display = 'block';
             topMenu.style.position = 'fixed';
             topMenu.style.top = '0px';
-            fixedGift.style.right = '50px';
+            if (fixedGift) fixedGift.style.right = '50px';
         }
     };
     burgerMenu();
@@ -110,8 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const fixedGift = document.querySelector('.fixed-gift');
         const idGift = document.getElementById('gift');
 
-        if (fixedGift) {
-
+        if (!fixedGift) {
+            return;
+        } else {
             document.body.addEventListener('click', (event) => {
                 let target = event.target;
 
@@ -149,30 +150,31 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     arrowTop();
 
-    // Слайдер
-    const slider = () => {
-        const mainSlider = document.querySelector('.main-slider'),
-            slides = mainSlider.querySelectorAll('.slide'),
-            sliderDots = document.querySelector('.slider-dots');
 
+    const mainSlider = document.querySelector('.main-slider'),
+        slides = mainSlider.querySelectorAll('.slide'),
+        sliderDots = mainSlider.querySelector('.slider-dots');
+
+    const gallerySlider = document.querySelector('.gallery-slider'),
+        slideImg = gallerySlider.querySelectorAll('.slide'),
+        galleryDots = gallerySlider.querySelector('.slider-dots');
+
+    const slider = (slider, slides, dots) => {
 
         let currentSlide = 0,
             interval,
             li;
 
-        // Содаем Dots
+
         slides.forEach((item) => {
             li = document.createElement('li');
             li.className = 'dot';
-            li.style.listStyleType = 'circle';
-            li.style.color = 'yellow';
-            sliderDots.appendChild(li);
+            li.innerHTML = '<button></button>';
+            dots.appendChild(li);
         });
 
-        // создаем переменную dots после их создания
         const dot = document.querySelectorAll('.dot');
-        // dot[0].className = 'slick-active';
-        dot[0].classList.add('slick-active');
+        dot[0].classList.add('active');
         slides[0].style.display = 'block';
 
         const prevSlide = (elem, index, strClass, active) => {
@@ -186,16 +188,16 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const autoPlaySlide = () => {
-            prevSlide(slides, currentSlide, 'slide-active', 'none');
-            prevSlide(dot, currentSlide, 'slick-active');
+            prevSlide(slides, currentSlide, 'active', 'none');
+            prevSlide(dot, currentSlide, 'active');
             currentSlide++;
 
             if (currentSlide >= slides.length) {
                 currentSlide = 0;
             }
 
-            nextSlide(slides, currentSlide, 'slide-active', 'block');
-            nextSlide(dot, currentSlide, 'slick-active');
+            nextSlide(slides, currentSlide, 'active', 'block');
+            nextSlide(dot, currentSlide, 'active');
         };
 
         const startSlide = (time = 3000) => {
@@ -206,20 +208,20 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(interval);
         };
 
-        mainSlider.addEventListener('click', (event) => {
+        slider.addEventListener('click', (event) => {
             event.preventDefault();
             let target = event.target;
 
-            if (!target.matches('.slider-dots, .dot')) {
+            if (!target.matches('.slider-dots, .dot, .slider-arrow')) {
                 return;
             }
 
-            prevSlide(slides, currentSlide, 'slide-active', 'none');
-            prevSlide(dot, currentSlide, 'slick-active');
+            prevSlide(slides, currentSlide, 'active', 'none');
+            prevSlide(dot, currentSlide, 'active');
 
-            if (target.matches('#arrow-right')) {
+            if (target.matches('.slider-arrow.next')) {
                 currentSlide++;
-            } else if (target.matches('#arrow-left')) {
+            } else if (target.matches('.slider-arrow.prev')) {
                 currentSlide--;
             } else if (target.matches('.dot')) {
                 dot.forEach((elem, index) => {
@@ -236,31 +238,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentSlide = slides.length - 1;
             }
 
-            nextSlide(slides, currentSlide, 'slide-active', 'block');
-            nextSlide(dot, currentSlide, 'slick-active');
+            nextSlide(slides, currentSlide, 'active', 'block');
+            nextSlide(dot, currentSlide, 'active');
         });
 
-        mainSlider.addEventListener('mouseover', (event) => {
+        slider.addEventListener('mouseover', (event) => {
+
             let target = event.target;
-            if (target.matches('.slider-dots') || target.matches('.dot')) {
+            if (target.matches('.slider-dots') ||
+                target.matches('.dot') ||
+                event.target.matches('.slider-arrow')) {
                 stopSlide();
             }
         });
 
-        mainSlider.addEventListener('mouseout', (event) => {
+        slider.addEventListener('mouseout', (event) => {
+
             let target = event.target;
-            if (target.matches('.slider-dots') || target.matches('.dot')) {
+            if (target.matches('.slider-dots') ||
+                target.matches('.dot') ||
+                event.target.matches('.slider-arrow')) {
                 startSlide();
             }
         });
-
         startSlide();
-
-
-
     };
-    slider();
-
+    slider(mainSlider, slides, sliderDots);
+    slider(gallerySlider, slideImg, galleryDots);
 
 });
 
