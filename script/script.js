@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleClub();
 
     // Бургер меню
-    const burgerMenu = () => {
+  /*  const burgerMenu = () => {
 
         const clientWidth = document.documentElement.clientWidth;
         const topMenu = document.querySelector('.top-menu');
@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (fixedGift) fixedGift.style.right = '50px';
         }
     };
-    burgerMenu();
+    burgerMenu();*/
 
     // Модальное окно 1
     const togglePopUp = () => {
-        // const formContent = document.querySelector('.form-content');
+
         const freeVisitForm = document.getElementById('free_visit_form');
 
         document.body.addEventListener('click', (event) => {
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     toggleMenu();
 
-    // Подарок
+   /* // Подарок
     const present = () => {
         const fixedGift = document.querySelector('.fixed-gift');
         const idGift = document.getElementById('gift');
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
     };
-    present();
+    present();*/
 
     // Стрелка
     const arrowTop = () => {
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
     arrowTop();
 
 
-    const mainSlider = document.querySelector('.main-slider'),
+    /*const mainSlider = document.querySelector('.main-slider'),
         slides = mainSlider.querySelectorAll('.slide'),
         sliderDots = mainSlider.querySelector('.slider-dots');
 
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     slider(mainSlider, slides, sliderDots);
     slider(gallerySlider, slideImg, galleryDots);
-
+*/
 });
 
 

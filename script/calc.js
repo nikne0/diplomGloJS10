@@ -3,7 +3,6 @@
 */
 "use strict";
 
-
 const calc = () => {
 
     const priceTotal = document.getElementById('price-total'),
@@ -29,7 +28,7 @@ const calc = () => {
         twelve: 24990
     };
 
-    function totalPrice(elem, priceClub) {
+    const totalPrice = (elem, priceClub) => {
         switch (elem) {
             case '1':
                 if (promoMessage.value === promoCode) {
@@ -60,29 +59,28 @@ const calc = () => {
                 }
                 break;
         }
-    }
+    };
+
+    const price = (item, label, priceLabel) => {
+        if (item === label) {
+            time.forEach((item) => {
+                item.addEventListener('change', () => {
+                    let elem = item.value;
+                    totalPrice(elem, priceLabel);
+                });
+            });
+        }
+    };
 
     labelClub.forEach((item) => {
-
-        item.addEventListener('change', () => {
-            if (item === labelSchelkovo) {
-                time.forEach((item) => {
-                    item.addEventListener('change', () => {
-                        let elem = item.value;
-                        totalPrice(elem, priceSchelkovo);
-                    });
-                });
-            } else if (item === labelMozaika) {
-                time.forEach((item) => {
-                    item.addEventListener('change', () => {
-                        let elem = item.value;
-                        totalPrice(elem, priceMozaika);
-                    });
-                });
+        item.addEventListener('change', (event) => {
+            const target = event.target;
+            if (target.matches('checked') || target.matches('input')) {
+                price(item, labelSchelkovo, priceSchelkovo);
+                price(item, priceMozaika, priceMozaika);
             }
         });
     });
-
 };
 calc();
 
