@@ -3,13 +3,6 @@
 */
 "use strict";
 
-const mainSlider = document.querySelector('.main-slider'),
-    slides = mainSlider.querySelectorAll('.slide'),
-    sliderDots = mainSlider.querySelector('.slider-dots');
-
-const gallerySlider = document.querySelector('.gallery-slider'),
-    slideImg = gallerySlider.querySelectorAll('.slide'),
-    galleryDots = gallerySlider.querySelector('.slider-dots');
 
 const slider = (slider, slides, dots) => {
 
@@ -64,7 +57,7 @@ const slider = (slider, slides, dots) => {
         event.preventDefault();
         let target = event.target;
 
-        if (!target.matches('.slider-dots, .dot, .slider-arrow')) {
+        if (!target.matches('.slider-dots, .slider-arrow')) {
             return;
         }
 
@@ -98,7 +91,7 @@ const slider = (slider, slides, dots) => {
 
         let target = event.target;
         if (target.matches('.slider-dots') ||
-            target.matches('.dot') ||
+            // target.matches('.dot') ||
             event.target.matches('.slider-arrow')) {
             stopSlide();
         }
@@ -108,14 +101,14 @@ const slider = (slider, slides, dots) => {
 
         let target = event.target;
         if (target.matches('.slider-dots') ||
-            target.matches('.dot') ||
+            // target.matches('.dot') ||
             event.target.matches('.slider-arrow')) {
             startSlide();
         }
     });
     startSlide();
 };
-slider(mainSlider, slides, sliderDots);
-slider(gallerySlider, slideImg, galleryDots);
+
+export default slider;
 
     

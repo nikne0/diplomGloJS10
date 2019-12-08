@@ -30,5 +30,6 @@ const present = () => {
         });
     }
 };
-present();
+
+export default present;
     

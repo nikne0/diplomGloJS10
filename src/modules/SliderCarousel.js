@@ -3,21 +3,19 @@
 */
 "use strict";
 
-
 class SliderCarousel {
     constructor({
-                     main,
-                     wrap,
-                     position = 0,
-                     prev,
-                     next,
-                     slidesToShow = 3,
-                     infinity = false,
-                     responsive = []
-    })
-    {
-        if(!main || !wrap){
-           return;
+                    main,
+                    wrap,
+                    position = 0,
+                    prev,
+                    next,
+                    slidesToShow = 3,
+                    infinity = false,
+                    responsive = []
+                }) {
+        if (!main || !wrap) {
+            return;
         }
 
         this.main = document.querySelector(main);
@@ -33,31 +31,34 @@ class SliderCarousel {
         };
         this.responsive = responsive;
     }
-    init(){
+
+    init() {
         this.addClass();
         this.addStyle();
 
-        if(this.prev && this.next){
+        if (this.prev && this.next) {
             this.controlSlider();
         } else {
             this.addArrow();
             this.controlSlider();
         }
-        if(this.responsive){
+        if (this.responsive) {
             this.responsiveInit();
         }
     }
-    addClass(){
+
+    addClass() {
         this.main.classList.add('glo-slider');
         this.wrap.classList.add('glo-slider__wrap');
-        for(let item of this.slides){
+        for (let item of this.slides) {
             item.classList.add('glo-slider__item');
         }
     }
-    addStyle(){
+
+    addStyle() {
         let style = document.getElementById('sliderCarousel');
 
-        if(!style){
+        if (!style) {
             style = document.createElement('style');
             style.id = 'sliderCarousel';
         }
@@ -83,32 +84,32 @@ class SliderCarousel {
         document.head.appendChild(style);
     }
 
-    controlSlider(){
+    controlSlider() {
         this.prev.addEventListener('click', this.prevSlider.bind(this));
         this.next.addEventListener('click', this.nextSlider.bind(this));
     }
 
-    prevSlider(){
-        if(this.option.infinity || this.option.position > 0){
+    prevSlider() {
+        if (this.option.infinity || this.option.position > 0) {
             --this.option.position;
-            if(this.option.position < 0){
+            if (this.option.position < 0) {
                 this.option.position = this.slides.length - this.slidesToShow;
             }
             this.wrap.style.transform = `translateX(-${this.option.position * this.option.slideWidth}%)`;
         }
     }
 
-    nextSlider(){
-        if(this.option.infinity || this.option.position < this.slides.length - this.slidesToShow){
+    nextSlider() {
+        if (this.option.infinity || this.option.position < this.slides.length - this.slidesToShow) {
             ++this.option.position;
-            if(this.option.position > this.slides.length - this.slidesToShow){
+            if (this.option.position > this.slides.length - this.slidesToShow) {
                 this.option.position = 0;
             }
             this.wrap.style.transform = `translateX(-${this.option.position * this.option.slideWidth}%)`;
         }
     }
 
-    addArrow(){
+    addArrow() {
         this.prev = document.createElement('button');
         this.next = document.createElement('button');
         this.prev.className = 'glo-slider__prev';
@@ -146,16 +147,16 @@ class SliderCarousel {
         document.head.appendChild(style);
     }
 
-    responsiveInit(){
+    responsiveInit() {
         const slideToShowDefault = this.slidesToShow;
         const allResponse = this.responsive.map(item => item.breakpoint);
         const maxResponse = Math.max(...allResponse);
 
         const checkResponse = () => {
             const windowWidth = document.documentElement.clientWidth;
-            if(windowWidth < maxResponse){
-                for(let i = 0; i < allResponse.length; i++){
-                    if(windowWidth < allResponse[i]){
+            if (windowWidth < maxResponse) {
+                for (let i = 0; i < allResponse.length; i++) {
+                    if (windowWidth < allResponse[i]) {
                         this.slidesToShow = this.responsive[i].slideToShow;
                         this.option.slideWidth = Math.floor(100 / this.slidesToShow);
                         this.addStyle();
@@ -174,28 +175,4 @@ class SliderCarousel {
 }
 
 
-const carousel = new SliderCarousel({
-    main: '#services .wrapper',
-    wrap: '.services-slider',
-    prev: '#slide-prev',
-    next: '#slide-next',
-    infinity: true,
-    slidesToShow: 5,
-    responsive: [
-        {
-            breakpoint: 1024,
-            slideToShow: 3
-        },
-
-        {
-            breakpoint: 768,
-            slideToShow: 2
-        },
-
-        {
-            breakpoint: 576,
-            slideToShow: 1
-        }
-    ],
-});
-carousel.init();
+export default SliderCarousel;

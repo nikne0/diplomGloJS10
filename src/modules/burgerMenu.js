@@ -3,7 +3,7 @@
 */
 "use strict";
 
-// Бургер меню
+
 const burgerMenu = () => {
 
     const clientWidth = document.documentElement.clientWidth;
@@ -17,5 +17,6 @@ const burgerMenu = () => {
         if (fixedGift) fixedGift.style.right = '50px';
     }
 };
-burgerMenu();
+
+export default burgerMenu;
     
