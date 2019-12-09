@@ -17,14 +17,14 @@ const present = () => {
                 idGift.style.display = 'block';
                 fixedGift.style.display = 'none';
             } else if (target.closest('.close-btn') ||
-                target.closest('.close_icon')) {
+                target.closest('.close_icon') ||
+                target.matches('.overlay')) {
                 idGift.style.display = 'none';
                 fixedGift.style.display = 'none';
             } else {
                 target = target.closest('.form-content');
                 if (!target) {
                     idGift.style.display = 'none';
-                    fixedGift.style.display = 'block';
                 }
             }
         });

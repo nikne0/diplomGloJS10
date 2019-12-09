@@ -13,6 +13,7 @@ const sendForm = () => {
     const statusText = document.createElement('div');
     statusText.style.cssText = 'font-size: 2rem; color: red';
     const popUp = document.querySelectorAll('.popup');
+    let priceTotal = document.getElementById('price-total');
 
     const form1 = document.getElementById('form1');
     const form2 = document.getElementById('form2');
@@ -51,6 +52,7 @@ const sendForm = () => {
                 })
                 .then(() => {
                     item.reset();
+                    priceTotal.textContent = '2999';
                     statusText.style.display = 'none';
 
                     if (item !== form3 && item !== form4 && item !== form5) {
@@ -85,7 +87,7 @@ const sendForm = () => {
         item.addEventListener('input', (event) => {
             const target = event.target,
                 inputPhone = document.querySelectorAll('input[type=tel]'),
-                inputText = document.querySelectorAll('p input[type=text]');
+                inputText = document.querySelectorAll('input[placeholder="Ваше имя..."]');
 
             const validateForm = (input, inputType, pattern) => {
                 if (target.matches(inputType)) {
@@ -103,7 +105,7 @@ const sendForm = () => {
             };
 
             validateForm(inputPhone, 'input[type=tel]', /^\+?[78]\d{10}$/);
-            validateForm(inputText, 'p input[type=text]', /^[а-яА-ЯёЁ0-9\s]+$/);
+            validateForm(inputText, 'input[placeholder="Ваше имя..."]', /^[а-яА-ЯёЁ0-9\s]+$/);
         });
 
 

@@ -5,7 +5,7 @@
 
 import arrowTop from './modules/arrowTop';
 import burgerMenu from './modules/burgerMenu';
-import calc from './modules/calc';
+import calc from "./modules/calc";
 import present from './modules/present';
 import sendForm from './modules/sendForm';
 import slider from './modules/slider';
@@ -24,7 +24,6 @@ burgerMenu();
 
 //Калькулятор
 calc();
-
 // Подарок
 present();
 

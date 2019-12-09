@@ -51,12 +51,12 @@ const toggleAll = () => {
     // Модальное окно 2
     const toggleCallbackForm = () => {
         const callbackForm = document.getElementById('callback_form');
-        // const callbackBtn = document.querySelector('.callback-btn');
+        const callbackRight = document.querySelector('.right');
 
         document.body.addEventListener('click', (event) => {
             let target = event.target;
 
-            if (target.closest('.callback-btn')) {
+            if (callbackRight && target.closest('.callback-btn')) {
                 handlerMenu(callbackForm);
             } else {
                 target = target.closest('.form-content')
@@ -67,6 +67,7 @@ const toggleAll = () => {
         });
     };
     toggleCallbackForm();
+
 
     // Меню .popup-menu
     const toggleMenu = () => {
