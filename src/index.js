@@ -13,9 +13,11 @@ import slider from './modules/slider';
 import gallerySliders from './modules/slider';
 import SliderCarousel from './modules/SliderCarousel';
 import toggleAll from './modules/toggleAll';
+import callbackForm from './modules/toggleCallbackForm';
 
 
-
+//
+callbackForm();
 
 // Стрелка
 arrowTop();
