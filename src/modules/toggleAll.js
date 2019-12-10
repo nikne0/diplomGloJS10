@@ -59,7 +59,7 @@ const toggleAll = () => {
             if (callbackRight && target.closest('.callback-btn')) {
                 handlerMenu(callbackForm);
             } else {
-                target = target.closest('.form-content')
+                target = target.closest('.form-content');
                 if (!target) {
                     callbackForm.style.display = 'none';
                 }

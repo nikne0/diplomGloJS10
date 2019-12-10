@@ -52,7 +52,7 @@ const sendForm = () => {
                 })
                 .then(() => {
                     item.reset();
-                    priceTotal.textContent = '2999';
+                    if (priceTotal) priceTotal.textContent = '2999';
                     statusText.style.display = 'none';
 
                     if (item !== form3 && item !== form4 && item !== form5) {
