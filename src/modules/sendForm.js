@@ -6,7 +6,8 @@
 const sendForm = () => {
 
     const errorMessage = "Error send......",
-        policyMessage = "ПОДТВЕРДТИТЕ ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ!"
+        policyMessage = "ПОДТВЕРДТИТЕ ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ!",
+        clubMessage = "Какой Клуб Вы выбираете?";
 
 
     const idThanks = document.getElementById("thanks");
@@ -14,6 +15,8 @@ const sendForm = () => {
     statusText.style.cssText = 'font-size: 2rem; color: red';
     const popUp = document.querySelectorAll('.popup');
     let priceTotal = document.getElementById('price-total');
+    const footerLetoMozaika = document.getElementById('footer_leto_mozaika');
+    const footerLetoSchelkovo = document.getElementById('footer_leto_schelkovo');
 
     const form1 = document.getElementById('form1');
     const form2 = document.getElementById('form2');
@@ -35,6 +38,13 @@ const sendForm = () => {
                 item.appendChild(statusText);
                 statusText.textContent = policyMessage;
                 return false;
+            }
+
+            if (item === form5) {
+                if (!footerLetoMozaika.checked && !footerLetoSchelkovo.checked) {
+                    statusText.textContent = clubMessage;
+                    return false;
+                }
             }
 
             const formData = new FormData(item);
@@ -84,7 +94,7 @@ const sendForm = () => {
                 });
         });
 
-        item.addEventListener('input', (event) => {
+         item.addEventListener('input', (event) => {
             const target = event.target,
                 inputPhone = document.querySelectorAll('input[type=tel]'),
                 inputText = document.querySelectorAll('input[placeholder="Ваше имя..."]');
