@@ -10,7 +10,8 @@ import calc from "./modules/calc";
 import present from './modules/present';
 import sendForm from './modules/sendForm';
 import slider from './modules/slider';
-import gallerySliders from './modules/slider';
+// import gallerySliders from './modules/slider';
+import gallerySliders from './modules/gallerySliders';
 import SliderCarousel from './modules/SliderCarousel';
 import toggleAll from './modules/toggleAll';
 import callbackForm from './modules/toggleCallbackForm';
@@ -43,7 +44,8 @@ const gallerySlider = document.querySelector('.gallery-slider'),
     galleryDots = gallerySlider.querySelector('.slider-dots');
 
 slider(mainSlider, slides, sliderDots);
-gallerySliders(gallerySlider, slideImg, galleryDots);
+// gallerySliders(gallerySlider, slideImg, galleryDots);
+gallerySliders();
 
 
 

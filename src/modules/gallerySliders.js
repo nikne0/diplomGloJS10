@@ -1,26 +1,28 @@
 /*
- *** Created by NikNet 08.12.2019
+ *** Created by NikNet 10.12.2019
 */
 "use strict";
+const gallerySliders = () => {
+    const gallerySlider = document.querySelector('.gallery-slider'),
+        slideImg = gallerySlider.querySelectorAll('.slide'),
+        galleryDots = gallerySlider.querySelector('.slider-dots');
 
-
-const slider = (slider, slides, dots) => {
 
     let currentSlide = 0,
         interval,
         li;
 
 
-    slides.forEach((item) => {
+    slideImg .forEach((item) => {
         li = document.createElement('li');
         li.className = 'dot';
         li.innerHTML = '<button></button>';
-        dots.appendChild(li);
+        galleryDots.appendChild(li);
     });
 
     const dot = document.querySelectorAll('.dot');
     dot[0].classList.add('active');
-    slides[0].style.display = 'block';
+    slideImg[0].style.display = 'block';
 
     const prevSlide = (elem, index, strClass, active) => {
         elem[index].classList.remove(strClass);
@@ -33,15 +35,15 @@ const slider = (slider, slides, dots) => {
     };
 
     const autoPlaySlide = () => {
-        prevSlide(slides, currentSlide, 'active', 'none');
+        prevSlide(slideImg , currentSlide, 'active', 'none');
         prevSlide(dot, currentSlide, 'active');
         currentSlide++;
 
-        if (currentSlide >= slides.length) {
+        if (currentSlide >= slideImg .length) {
             currentSlide = 0;
         }
 
-        nextSlide(slides, currentSlide, 'active', 'block');
+        nextSlide(slideImg , currentSlide, 'active', 'block');
         nextSlide(dot, currentSlide, 'active');
     };
 
@@ -53,7 +55,7 @@ const slider = (slider, slides, dots) => {
         clearInterval(interval);
     };
 
-    slider.addEventListener('click', (event) => {
+    gallerySlider.addEventListener('click', (event) => {
         event.preventDefault();
         let target = event.target;
 
@@ -61,19 +63,19 @@ const slider = (slider, slides, dots) => {
             return;
         }
 
-        prevSlide(slides, currentSlide, 'active', 'none');
+        prevSlide(slideImg , currentSlide, 'active', 'none');
         prevSlide(dot, currentSlide, 'active');
 
-        if (target.matches('.slider-arrow.next') ||
-            target.matches('.slider-arrow.next span') ||
-            target.matches('.slider-arrow.next span i')) {
-            console.log("next");
+        if (target.matches('.slider-arrow.next')) {
+            stopSlide();
             currentSlide++;
-        } else if (target.matches('.slider-arrow.prev')) {
-            console.log("prev");
+        }
+        if (target.matches('.slider-arrow.prev')) {
+            stopSlide();
             currentSlide--;
         }
         if (target.matches('.slider-dots')) {
+            stopSlide();
             dot.forEach((elem, index) => {
                 if (elem === target) {
                     currentSlide = index;
@@ -81,18 +83,18 @@ const slider = (slider, slides, dots) => {
             });
         }
 
-        if (currentSlide >= slides.length) {
+        if (currentSlide >= slideImg .length) {
             currentSlide = 0;
         }
         if (currentSlide < 0) {
-            currentSlide = slides.length - 1;
+            currentSlide = slideImg .length - 1;
         }
 
-        nextSlide(slides, currentSlide, 'active', 'block');
+        nextSlide(slideImg , currentSlide, 'active', 'block');
         nextSlide(dot, currentSlide, 'active');
     });
 
-    slider.addEventListener('mouseover', (event) => {
+    gallerySlider.addEventListener('mouseover', (event) => {
 
         let target = event.target;
         if (target.matches('.slider-dots') ||
@@ -102,7 +104,7 @@ const slider = (slider, slides, dots) => {
         }
     });
 
-    slider.addEventListener('mouseout', (event) => {
+    gallerySlider.addEventListener('mouseout', (event) => {
 
         let target = event.target;
         if (target.matches('.slider-dots') ||
@@ -114,6 +116,5 @@ const slider = (slider, slides, dots) => {
     startSlide();
 };
 
-export default slider;
-
+export default gallerySliders;
     
